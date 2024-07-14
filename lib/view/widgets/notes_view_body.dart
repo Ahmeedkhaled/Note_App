@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_local_storage/cubits/notes_cubit/notes_cubit_cubit.dart';
-import 'package:project_local_storage/view/widgets/custom_app_bar.dart';
 import 'package:project_local_storage/view/widgets/notes_listview.dart';
+import 'custom_app_bar.dart';
 
 class NotesViewBody extends StatefulWidget {
   const NotesViewBody({super.key});
@@ -20,18 +20,22 @@ class _NotesViewBodyState extends State<NotesViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Column(
-      children: [
-        const CustomAppBar(
-          title: "Notes",
-          icon: Icons.search,
-        ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.02,
-        ),
-        const Expanded(child: NotesListView()),
-      ],
-    ));
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 24),
+      child: Column(
+        children: [
+          SizedBox(
+            height: 50,
+          ),
+          CustomAppBar(
+            title: 'Notes',
+            icon: Icons.search,
+          ),
+          Expanded(
+            child: NotesListView(),
+          ),
+        ],
+      ),
+    );
   }
 }

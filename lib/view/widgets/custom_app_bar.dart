@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:project_local_storage/view/widgets/custom_icon_search.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key, required this.title, required this.icon});
+  const CustomAppBar(
+      {super.key, required this.title, required this.icon, this.onPressed});
+
   final String title;
   final IconData icon;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,10 +15,13 @@ class CustomAppBar extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(fontSize: 28, color: Colors.white),
+          style: const TextStyle(
+            fontSize: 28,
+          ),
         ),
-         CustomIconSearch(
-          icon:icon ,
+        CustomIcon(
+          onPressed: onPressed,
+          icon: icon,
         ),
       ],
     );

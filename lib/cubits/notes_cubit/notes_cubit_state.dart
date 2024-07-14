@@ -1,16 +1,8 @@
-part of 'notes_cubit_cubit.dart';
+import 'package:meta/meta.dart';
 
 @immutable
-abstract class NotesCubitState {}
+abstract class NotesState {}
 
-class NotesCubitInitial extends NotesCubitState {}
+class NotesInitial extends NotesState {}
 
-class NotesCubitSuccess extends NotesCubitState {}
-
-// class NotesCubitLoading extends NotesCubitState {}
-
-// class NotesCubitSuccess extends NotesCubitState {
-//   final List<NoteModel> notes;
-
-//   NotesCubitSuccess({required this.notes});
-// }
+class NotesSuccess extends NotesState {}

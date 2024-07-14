@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_local_storage/core/constant.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
@@ -7,8 +8,10 @@ class CustomTextField extends StatelessWidget {
       this.maxLines = 1,
       this.onSaved,
       this.onChanged});
+
   final String hintText;
   final int maxLines;
+
   final void Function(String?)? onSaved;
 
   final Function(String)? onChanged;
@@ -24,13 +27,13 @@ class CustomTextField extends StatelessWidget {
           return null;
         }
       },
-      cursorColor: Theme.of(context).primaryColor,
+      cursorColor: kPrimaryColor,
       maxLines: maxLines,
       decoration: InputDecoration(
         hintText: hintText,
         border: buildBorder(),
         enabledBorder: buildBorder(),
-        focusedBorder: buildBorder(Theme.of(context).primaryColor),
+        focusedBorder: buildBorder(kPrimaryColor),
       ),
     );
   }
