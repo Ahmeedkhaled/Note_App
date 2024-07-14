@@ -5,6 +5,8 @@ abstract class NotesCubitState {}
 
 class NotesCubitInitial extends NotesCubitState {}
 
+class NotesCubitSuccess extends NotesCubitState {}
+
 // class NotesCubitLoading extends NotesCubitState {}
 
 // class NotesCubitSuccess extends NotesCubitState {
