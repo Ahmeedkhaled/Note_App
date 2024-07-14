@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project_local_storage/core/flutter_toast.dart';
 import 'package:project_local_storage/cubits/notes_cubit/notes_cubit_cubit.dart';
 import 'package:project_local_storage/model/note_model.dart';
 import 'package:project_local_storage/view/widgets/edit_note_view.dart';
@@ -51,7 +52,7 @@ class NoteItem extends StatelessWidget {
               trailing: IconButton(
                 onPressed: () {
                   note.delete();
-
+                  ToastFlutter.flutterToast();
                   BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                 },
                 icon: const Icon(
