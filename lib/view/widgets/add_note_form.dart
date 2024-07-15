@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:project_local_storage/cubits/add_note_cubit/add_note_cubit.dart';
-import 'package:project_local_storage/model/note_model.dart';
-import 'package:project_local_storage/view/widgets/custom_button_note.dart';
-import 'package:project_local_storage/view/widgets/custom_text_feild.dart';
+import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:note_app/model/note_model.dart';
+import 'package:note_app/view/widgets/custom_button_note.dart';
+import 'package:note_app/view/widgets/custom_text_feild.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({

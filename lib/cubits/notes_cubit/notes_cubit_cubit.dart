@@ -1,9 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:hive/hive.dart';
-import 'package:project_local_storage/core/constant.dart';
-import 'package:project_local_storage/cubits/notes_cubit/notes_cubit_state.dart';
-
-import 'package:project_local_storage/model/note_model.dart';
+import 'package:note_app/core/constant.dart';
+import 'package:note_app/cubits/notes_cubit/notes_cubit_state.dart';
+import 'package:note_app/model/note_model.dart';
 
 class NotesCubit extends Cubit<NotesState> {
   NotesCubit() : super(NotesInitial());
